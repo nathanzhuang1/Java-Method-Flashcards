@@ -4,10 +4,6 @@ Created on Eclipse using Java on January 17, 2025. Uploaded onto Github Saturday
 ## Description
 My product is designed for beginners to learn about methods in Java using a photography themed approach. The goal of this is for the user to know and understand what a method is and how to use it.
 
-## Built With
-- Java
-- Java Swing/AWT (GUI)
-
 ## Features
 - Title page: allows user to navigate the concepts, activity, and quiz pages
 - Concepts page: informs the user about how to use methods and why it is essential in the present Java world
@@ -17,6 +13,10 @@ My product is designed for beginners to learn about methods in Java using a phot
  ### Artistic Choice
 - Features vibrant colors in the title page with different images with related colors.
 - Contains different colored panels in concepts page.
+
+## Built With
+- Java
+- Java Swing/AWT (GUI)
 
 ## Major Skills
 - Arrays and Arraylist
