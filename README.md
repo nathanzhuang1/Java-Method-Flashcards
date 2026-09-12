@@ -14,7 +14,7 @@ My product is designed for beginners to learn about methods in Java using a phot
 - Activity page: provides the user an opportunity to test their knowledge by implementing flashcards that will prepare the user for the quiz
 - Quiz page: tests the user in what they learned overall about program modules such as Java, static Methods, Class Math, static Fields, declaring methods with multiple parameters, notes on declaring and using methods, method-call stack, Java API packages, random number generation, enumeration, and scope of declaration.
 
- ##### Artistic Choice
+ ### Artistic Choice
 - Features vibrant colors in the title page with different images with related colors.
 - Contains different colored panels in concepts page.
 
