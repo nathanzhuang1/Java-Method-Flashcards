@@ -1,0 +1,243 @@
+﻿
+*1. Program Modules in Java
+
+
+~ INTRO TO METHODS ~
+Java API Methods: Java programs allows the user to create custom methods and classes that can be written using predefined methods like 
+".equalsIgnoreCase(“...“)" and classes like an ArrayList provided by the API (Java Application Programming Interface).
+
+Similar classes are usually grouped into packages to be easily managed and reused for importing in programs.
+
+
+~ PURPOSE OF METHODS ~
+Methods help to organize a program by separating its task to individual units that are capable of performing mini-class level tasks. 
+This is great for dividing and conquering a large task into smaller tasks to facilitate the readability and debugging process of the program. 
+This also enhances software reusability as the methods can be used as fundamental tools to establish new, larger programs.
+
+Analogy: The teacher (caller) asks his/her student (called method) to complete a task and communicate back (using the return keyword). 
+The teacher is not aware of how the student would do their assignment since the student can also call other methods to help them perform their tasks.
+
+~ WHAT ARE OBJECTS? ~
+Objects refers to a basic unit of Object-Oriented Programming that represents real-life entities. 
+Objects are instances of a class that are created to use the methods and attributions of a class. 
+For example, “basketballPlayerObject” is an object that represents generic basketball players.
+
+
+What is an Instance?
+An instance is a created variable of a class. However, they are not as generic as objects. 
+For example, an instance can be “Lebron James”, and it falls under the object category “basketballPlayerObject”.
+
+#P#:images/methodHierachy.png
+
+*2. static Methods, Class Math, & static Fields
+
+
+~ STATIC METHODS ~
+A static method (or a class method) is where the method that performs a task is not dependent on any object contents; 
+The method belongs to the class itself since it is typically declared entirely by using the class name instead. 
+To sum up, all static methods can be called without creating a class object. 
+Placement: To acknowledge a method as 'static', place the keyword static before the return type in order to declare method static.
+		   For example, public static void methodName() 
+
+
+~ CLASS MATH AND FIELDS ~
+A field is a variable of any type declared within the class that represents a value. 
+A field that corresponds to an attribute is recognized as an instance variable where each instance (object) of the class contains a 
+distinct instance of the same variable in memory. 
+
+Example:
+public class Person { 
+String name;  // This is a field (instance variable) representing an attribute.
+int age;  // Another field representing an attribute. 
+}
+
+Predefined Math fields in Java API includes Math.PI (3.141592653589793) and Math.E (2.718281828459045). 
+They are a static final double field in the Math class. Declaring the field public allows the fields to be used in own classes. 
+A field declared with keyword final makes that variable constant - the value can no longer be modified after initialization (ex. final score = 3). 
+PI and E are final constants because their values will always remain the same. 
+
+
+~ STATIC FIELDS ~ 
+Static fields, also known as class variables, are fields that are shared among the objects of a particular class. 
+Each object of that class does not need to have a separate instance of the field. 
+In other words, the static field belongs only to the class and is accessible throughout the class.
+
+#P#:images/staticFieldDiagram.png
+In this picture, this showcases the objects that share a copy of the same field. 
+In all, both the class variables and instance variables represent the fields of a class. 
+The main method (public static void main(String[] args)) is static to avoid creating instances of the main class.
+  
+
+
+*3. Declaring Methods with Multiple Parameters
+
+
+~ PARAMETERS & ARGUMENTS ~
+Multiple method parameters - which are a list of variables within the parenthesis upon method declaration - are to be used as a comma-separated list. 
+Parameters are variables that are defined in parenthesis after a method declaration allocated after the method name. 
+There must be one argument for every parameter called in the method declaration.  
+
+Arguments are values given to the parameters:
+They refer to the value passed on to a function when the function is called, and the value passed contains sufficient amount of information required 
+to be processed by the program. 
+Variables, expressions, or constants are also used in method arguments.
+
+In other words, the parameters are the receivers while the arguments are the providers.
+
+
+~ STRING CONCATENATION ~
+To concatenate strings, meaning to add multiple string together, add the "+" operator. 
+Concatenating a string with a boolean would turn the boolean into strings “true” or “false”.
+
+Example:
+boolean isActive = true;
+String trafficLight = "It is green light: " + isActive;  // Combining the boolean with String
+
+
+~ OTHER PRIMITIVE TYPES TO STRING ~
+Every primitive type has a String representation. For example, the int 5 can be modified to String “5”.
+
+
+~ toString METHOD ~
+All Java classes contain a toString method that outputs a String representation of the object.
+When overridden, the reader of the code can determine the topic clearly since the string conversion facilitates the understanding process of 
+the code’s topic.
+
+Example of toString Code and argument/parameter Codes:
+#P#:images/toStringExample.png
+#P#:images/argumentExample.png
+#P#:images/parameterExample.png
+
+
+ 
+*4. Notes on Declaring and Using Methods
+
+
+~ HOW TO CALL A METHOD? ~
+Calling Methods Within Same Class While Omitting Object Reference: Use only the method name individually to call on another method. 
+For example, in method1, type “method2();” to summon the contents from that method.
+
+Calling Methods Within Same Class With Object Reference: Use a variable that has reference to the object. 
+Place a dot after that and beyond the dot, add the method name. For example, “myCat” is a reference variable to an actual object called “Cat”. 
+That object is an instance of the “Cat” class, where the name “Lucky” has been created. 
+There is another method called “meow”, where it collects the name of the “Cat”, which is “Lucky”, and outputs “Lucky meows”. 
+The structure of the calling method is: “myCat.meow();”
+
+Calling Static Methods: Use the class name, place a dot, and put the name of the static method afterwards. 
+
+
+~ CALLING STATIC AND NON-STATIC METHODS ~ 
+Non-Static Methods: Can summon any method of the same class by calling its direct method name and can modify and control any of the class’s fields 
+directly.
+
+Static Methods: Can only call other static methods from the same class and can only control any of the static fields of the same class directly.
+
+
+~ HOW TO RETURN A VALUE FROM A METHOD? ~
+How to end a method without returning a value?
+1. Add a method-ending right curly brace to end the program flow within the method.
+2. Type “return;” to immediately terminate the method after execution has completed.
+
+How to end a method and return a value?
+Type “return expression;”. The “expression” is assessed first and the resulting value will be returned to their caller. 
+The value can be any primitive type or an instance of an object, depending on the topic of the class and its situation. 
+Be sure to change void into int or any primitive type corresponding to the primitive type of the value returned from the method.
+
+
+
+*5 - Method-Call Stack
+
+
+~ STACK ~
+A stack is analogous to a dish pile. A dish is placed on the pile at the top of the stack (referred to as pushing an item onto the stack). 
+A dish is removed from the top of the pile (referred to as popping an item off from its stack). 
+In other words, it is a data structure in which the first element is removed and the last element is added. 
+This is also referred to as LIFO (last in first out).
+
+
+~ STACK IN THE WORKS ~
+When a program summons a method, the method must know how to return to the caller. 
+The return address of the calling method is imported onto a program execution stack to organize the program execution process. 
+As a result, the last-in, first-out order will be orchestrated when the program calls on multiple methods to ensure successive return addresses.
+
+
+~ STACK OVERFLOW ~
+Everytime a method is called, an activation record is created. 
+Stack overflow occurs when the number of method calls outweigh the number of activation records stored on the program execution stack, 
+where active subroutines of the program are stored.
+
+
+
+*6 - Java API Packages
+In the Java API, Java has many predefined classes contained in related class categories called packages. 
+For example, java.util is a package that contains many related classes such as Hashmaps, Arraylists, Scanners, etc. 
+In addition, java.io has classes that is responsible for file handling including Printwriter and File. 
+
+
+Overview of Java Packages and API Documentation:
+https://docs.oracle.com/javase/6/docs/api/
+
+Here are images of different Java predefined classes:
+#P#:images/classExamples.png
+
+
+
+*7 - Random-Number Generation
+
+
+~ JAVA.UTIL CLASS RANDOM ~ 
+This is a static method random located in class Math. So, this can be called using “Math.random()”. 
+Objects of the class Random does not only produce int values; It can also produce boolean, double, long, bytes, and even Gaussian values! 
+
+The class Random creates pseudorandom numbers, which is a complex mathematical calculation that provides value sequences. 
+Random uses the present time of the day to produce a default seed for the random-number generator. This is explained clearly the picture in the end
+of the section.
+  
+With accordance to the picture, the process starts with the seed. If no seed is provided, the current time of the day would be utilized. 
+After, the seed is initialized to create a first state for the random number generator. 
+After each random number is created, the generator updates the state to calculate the next random number, ensuring that the next random number 
+corresponds to the previous random number. The repeating process is a sign of a pseudorandom sequence.
+
+
+~ CALLING DOUBLE MATH.RANDOM ~
+The “Math.random()” has a bandwidth to create only double values through the scope 0.0 <= x <= 1.0. 
+If you want a number from 0.0 to 6.0, simply type “Math.Random() * 6;”.
+
+
+~ CALLING INTEGER MATH.RANDOM ~
+When calling an int value Math.Random using nextInt, the int argument will return a value from 0 to the number before the argument’s value. 
+For example, when calling a random integer between 0-16, you must typecast “Math.Random()” using “int”. 
+In addition, you should use “17” as the end number instead of “16”. 
+The final call result to generate random integer numbers from 0-16 is “(int) (Math.Random() * 17);”
+
+
+~ SCALING FACTOR ~
+For example, if a user is rolling a six-sided die, the number “6” is the scaling factor since it symbolizes the numbers that nextInt would create: 0-5. 
+However, a six-sided die has sides 1-6, not 0-5. 
+To fix this, add a shifting value of “1” to our previous result so that the program knows the first value of the anticipated output of random numbers. 
+
+Example:
+Random randomNumbers = new Random();  // creating an object of class Random
+face = 1 + randomNumbers.nextInt(6);  // will produce numbers 1-6
+
+#P#:images/randomNumberIllustration.png
+
+
+
+*8 - Introducing Enumerations
+
+
+Enumeration are constants that can be global or non-globalized. 
+It can declare a set of contents represented by identifiers (name given to methods, packages, classes, etc) that are related. 
+Variables of the enumeration can only be assigned to the constants listed in the enumeration. 
+
+
+
+*9 - Scope of Declarations
+
+
+~ SCOPING ~
+The scope of a field or a method applies to the entire scope of the class.
+The scope of a local variable is from the point of their declaration to the end of the method or parenthesis.
+The scope of a method declaration parameter is the end of the method in which the parameter receives the argument's value.
+The scope of a local variable declared in a for statement occurs within the block of the for loop.
