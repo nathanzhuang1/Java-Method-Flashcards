@@ -1,10 +1,10 @@
-## Photography-Themed Methods Lesson
+# Photography-Themed Methods Lesson
 Created on Eclipse using Java on January 17, 2025. Uploaded onto Github Saturday Sep 12, 2026. Open in Eclipse or IntelliJ to run MethodsApp.java
 
-# Description
+## Description
 My product is designed for beginners to learn about methods in Java using a photography themed approach. The goal of this is for the user to know and understand what a method is and how to use it.
 
-# Built With
+### Built With
 
 # Features
 - Title page: allows user to navigate the concepts, activity, and quiz pages
